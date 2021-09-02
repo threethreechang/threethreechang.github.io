@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="或许爱世界"><title> | 小野人's Thought</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">小野人's Thought</h1><a id="logo" href="/.">小野人's Thought</a><p class="description">in the east</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"></h1><div class="post-meta">2021-09-01</div><a class="disqus-comment-count" href="/2021/%E7%AE%80%E6%98%93%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/#vcomment"><span class="valine-comment-count" data-xid="/2021/%E7%AE%80%E6%98%93%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/"></span><span> 条评论</span></a><div class="post-content"><hr>
+<p>title:简易git操作手册<br>description：体验使用git进行简单团队合作的完整过程</p>
+<hr>
+<h1 id="我目前一无所知"><a href="#我目前一无所知" class="headerlink" title="我目前一无所知"></a>我目前一无所知</h1><p>1.下载好git bash</p>
+<p>2.配置好自己github的基本资料（这步无关紧要）</p>
+<p>3.新建一个空文件夹 右键gitbash here （以后clone下来的项目就会在这个文件夹）</p>
+<p>5.设置签名</p>
+<ul>
+<li><p>项目(仓库)级别<code>仅在当前本地库有效</code></p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="keyword">user</span>.name tom  <span class="comment">#设置用户名tom</span></span><br><span class="line">git config <span class="keyword">user</span>.email liu@qq.com <span class="comment">#设置用户邮箱</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>保存位置：.git/config</p>
+</blockquote>
+<ul>
+<li><p>系统用户级别<code>仅在当前登录的操作系统用户有效</code></p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">config</span> <span class="comment">--global user.name tom</span></span><br><span class="line">git <span class="built_in">config</span> <span class="comment">--global user.email liu@qq.com</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>仅仅加了一个 <code>--global</code></p>
+<p>优先级别：<code>项目级别</code>  &gt;  <code>系统级别</code></p>
+<p>信息保存位置：<code>~/.gitconfig 文件</code>   </p>
+<p>cd ~ home目录 </p>
+</blockquote>
+<p>ps：用户名和邮箱可以与github账号不同 邮箱也可以是乱写的 </p>
+<p>可以理解成：昵称和email格式的自我介绍</p>
+<p>6.</p>
+<p><code>git clone https://github.com/threethreechang/nurseryIMS_2021.git</code></p>
+<p><code>git clone https://github.com/XXXX</code></p>
+<p>然后等待 从远程库下载文件</p>
+<p>clone 完整的把远程库克隆到本地  克隆下来后不要在主分支里面做开发 </p>
+<p>clone进行一次，从无到有的过程，更新用pull</p>
+<p>7.</p>
+<p><code>ls -lA</code> 查看下载下来的所有文件</p>
+<p><code>git remote -v</code>   查看远程库的别名 （叫origin）</p>
+<p>8.</p>
+<p>基本上到这里 已经可以进行自己的模块的开发了</p>
+<h1 id="过了三天-开发好了"><a href="#过了三天-开发好了" class="headerlink" title="过了三天 开发好了"></a>过了三天 开发好了</h1><p>9.假设开发好了功能 要push上去</p>
+<p>同样地，右键选择bash here </p>
+<p>① <code>git add .</code>   (注意有.)</p>
+<p>② <code>git commit -m &#39;注释&#39;</code> （比如这里写 ‘ lk write login function in 20210901’）</p>
+<p>③<code>git push origin 分支名</code>  （举例：git push origin lkdev  则会自动生成lkdev这个分支  每个人就在自己的分支里面完成功能 ）</p>
+<p>pss 如果只推送某个文件 则</p>
+<p>①<code>git add 文件名</code></p>
+<p>②<code>git commit -m ‘注释’ 文件名</code></p>
+<p>10.origin是别名</p>
+<p><code>git fetch 别名 分支名</code> （把远程库中的某分支抓取下来）</p>
+<p>使用fetch  本地文件不会变化！不会覆盖！只是下载下来远程仓库的文件</p>
+<p><code>git checkout 别名/分支名</code>  （转换到下载下来的远程仓库的某分支）</p>
+<p><code>git checkout 原来你工作的那个本地分支名</code>  （返回原来你所在的本地分支）</p>
+<h1 id="接下来的操作就是合并了"><a href="#接下来的操作就是合并了" class="headerlink" title="接下来的操作就是合并了"></a>接下来的操作就是合并了</h1><p>合并会发生冲突等问题 git只负责识别冲突</p>
+<p>合并的冲突解决并不是git自动解决的 是团队商讨然后手动解决 最终才merge</p>
+<p>属于后期的操作  先到这里吧</p>
+<h1 id="待补充"><a href="#待补充" class="headerlink" title="待补充"></a>待补充</h1><p>12.pull=fetch+merge</p>
+<p>13.想要倒回之前的版本</p>
+<p><code>git log</code> </p>
+<p><code>git log --oneline</code>（查看本地库版本信息）</p>
+<ul>
+<li><p>基于索引值<code>推荐</code></p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">reset</span> <span class="comment">--hard 指针位置</span></span><br><span class="line">例子：git <span class="keyword">reset</span> <span class="comment">--hard a6ace91 #回到这个状态</span></span><br></pre></td></tr></table></figure></li>
+<li><p>使用 <strong>^</strong> 符号<code>只能后退</code></p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">reset</span> <span class="comment">--hard HEAD^</span></span><br><span class="line">例子：git <span class="keyword">reset</span> <span class="comment">--hard HEAD^^</span></span><br><span class="line">注意：几个 ^ 表示后退几步</span><br></pre></td></tr></table></figure></li>
+<li><p>使用 <strong>~</strong> 符号<code>只能后退</code></p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">reset</span> <span class="comment">--hard HEAD~n</span></span><br><span class="line">例子：git <span class="keyword">reset</span> <span class="comment">--hard HEAD~3</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="以上只是部分我认为比较重要的"><a href="#以上只是部分我认为比较重要的" class="headerlink" title="以上只是部分我认为比较重要的"></a>以上只是部分我认为比较重要的</h1><h1 id="完整学习地址"><a href="#完整学习地址" class="headerlink" title="完整学习地址"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pW411A7a5">完整学习地址</a></h1></div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2021/hello-world/">Hello World</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'N1xlRbvhpWFXXLUXX10WXbfk-gzGzoHsz',
+  appKey:'ydqizkfhuyhCmvOT3Q1l4udo',
+  placeholder:'我也要来说几句...',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'10'
+})
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://threethreechang.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/test/">吃了吗</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/Git%E6%93%8D%E4%BD%9C/">git操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/%E7%AE%80%E6%98%93%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/">简易操作手册</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2021 <a href="/." rel="nofollow">小野人's Thought.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
