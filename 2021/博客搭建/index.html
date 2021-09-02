@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="或许爱世界"><title>博客搭建 | 小野人's Thought</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">博客搭建</h1><a id="logo" href="/.">小野人's Thought</a><p class="description">in the east</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">博客搭建</h1><div class="post-meta">2021-09-02<span> | </span><span class="category"><a href="/categories/blog/">blog</a></span></div><a class="disqus-comment-count" href="/2021/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/#vcomment"><span class="valine-comment-count" data-xid="/2021/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"></span><span> 条评论</span></a><div class="post-content"><h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mU4y1j72n">b站视频</a>   </p>
+<p>本文该部分相当于该视频的文字版，感谢视频原作者开启了小白搭建博客的大门</p>
+<h4 id="1-1-工具"><a href="#1-1-工具" class="headerlink" title="1.1 工具"></a>1.1 工具</h4><ul>
+<li><p>Node.js  </p>
+<p>新版nodejs集成了npm</p>
+</li>
+<li><p>git</p>
+</li>
+<li><p>hexo: </p>
+<p><code>npm install hexo-cli -g</code></p>
+</li>
+</ul>
+<p>查看版本，确认安装成功。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-搭建仓库"><a href="#1-2-搭建仓库" class="headerlink" title="1.2 搭建仓库"></a>1.2 搭建仓库</h4><p>在github中：</p>
+<ul>
+<li><p>new repository</p>
+<p>建立名为“username.github.io”的仓库</p>
+<p>比如我github名叫threethreechang 则建立threethreechang.github.io</p>
+</li>
+<li><p>public</p>
+</li>
+<li><p>add a README file</p>
+</li>
+</ul>
+<h4 id="1-3-配置ssh-key"><a href="#1-3-配置ssh-key" class="headerlink" title="1.3 配置ssh key"></a>1.3 配置ssh key</h4><ol>
+<li><p>任意文件夹下Git Bash Here</p>
+</li>
+<li><p><code>ssh</code></p>
+</li>
+<li><p><code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code>  </p>
+<p>初次生成sshkey 需敲4次回车，若已存在会提示existed</p>
+<p>生成id_rsa.pub文件 位于/c/Users/YOURNAME/.ssh/id_rsa</p>
+</li>
+<li><p><code>单击个人-</code>&gt;<code>settings</code>-&gt;<code>SSH and GPG keys</code>-&gt;<code>new SSH key</code></p>
+</li>
+<li><p>起个Title名，将id_rsa.pub中内容复制到Key下并确定</p>
+</li>
+<li><p>测试ssh绑定是否成功</p>
+<p><code>ssh -T git@github.com  #提示 hi username 即成功</code></p>
+</li>
+</ol>
+<h4 id="1-4-本地搭建博客"><a href="#1-4-本地搭建博客" class="headerlink" title="1.4 本地搭建博客"></a>1.4 本地搭建博客</h4><ol>
+<li>新建空文件夹作为博客项目文件夹 并git bash here</li>
+<li><code>hexo init #拷贝hexo框架至本地  </code></li>
+<li><code>hexo s  #静态生成本地hexo页面</code></li>
+</ol>
+<h4 id="1-5-部署至网络"><a href="#1-5-部署至网络" class="headerlink" title="1.5.部署至网络"></a>1.5.部署至网络</h4><ol>
+<li><p>打开hexo框架中的_config.yml</p>
+</li>
+<li><p>文件末尾添加内容并保存：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git    ##: 英文冒号后面有空格</span><br><span class="line">  repository: https://github.com/username/username.github.io.git      ## username替换为你的github用户名</span><br><span class="line">  branch: main    ## 新版github默认分支为main</span><br></pre></td></tr></table></figure></li>
+<li><p><code>npm install hexo-deployer-git --save</code></p>
+</li>
+<li><p><code>hexo g  #hexo generate 生成静态文件</code></p>
+</li>
+<li><p><code>hexo d  #hexo deploy  部署网站</code></p>
+</li>
+<li><p>弹出open SSH窗口</p>
+<p>-输入用户名</p>
+<p>-输入令牌序列号</p>
+<p>令牌获取：<code>个人</code>-&gt;<code>settings</code>-&gt;<code>Peronal access tokens</code>-&gt;<code>新建，配置期限和权限</code>-&gt;<code>得到了序列号</code></p>
+<blockquote>
+<p>第一次生成的时候能看见令牌 之后令牌会被隐藏。截图留用</p>
+</blockquote>
+</li>
+</ol>
+<p>7.settings-pages-Your site is published at <a href="https://threethreechang.github.io/">https://threethreechang.github.io/</a></p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">hexo的主题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.haomwei.com/technology/maupassant-hexo.html">本主题Maupassant</a></p>
+<h3 id="样式的个性设置与其他"><a href="#样式的个性设置与其他" class="headerlink" title="样式的个性设置与其他"></a>样式的个性设置与其他</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lfri/p/12219831.html">一篇好博客</a></p>
+</div><div class="tags"></div><div class="post-nav"><a class="next" href="/2021/test/">吃了吗</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'N1xlRbvhpWFXXLUXX10WXbfk-gzGzoHsz',
+  appKey:'ydqizkfhuyhCmvOT3Q1l4udo',
+  placeholder:'我也要来说几句...',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'10'
+})
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://threethreechang.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/test/">吃了吗</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/Git%E6%93%8D%E4%BD%9C/">git操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2021 <a href="/." rel="nofollow">小野人's Thought.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
